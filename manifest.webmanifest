@@ -1,0 +1,13 @@
+{
+  "name": "Foundry — a typography playground",
+  "short_name": "Foundry",
+  "description": "Pair fonts, build type scales, print specimen posters, check contrast and export CSS. Your design lives in the link.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f3ee",
+  "theme_color": "#e4002b",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

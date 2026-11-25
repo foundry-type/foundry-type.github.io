@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en" data-theme="swiss">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Foundry — a typography playground</title>
+<meta name="description" content="Foundry is a free typography playground: pair fonts, generate type scales, tune kerning, leading and variable weight, print specimen posters, check WCAG contrast, export CSS, play Guess the Font and walk through type history. Your whole design lives in the URL.">
+<meta property="og:title" content="Foundry — a typography playground">
+<meta property="og:description" content="Pair fonts, build type scales, print posters, check contrast, export CSS. Every design is a shareable link.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kumarnikhildeveloperaccount.github.io/foundry/">
+<meta name="theme-color" content="#e4002b">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Fraunces:wght@100..900&amp;family=Anton&amp;display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top" id="top">
+  <a class="brand" href="#hero" aria-label="Foundry home">
+    <span class="brand-mark" aria-hidden="true">F</span><span class="brand-word">Foundry</span>
+  </a>
+  <nav class="nav" id="nav" aria-label="Main">
+    <ul>
+      <li><a href="#studio"><i>01</i>Studio</a></li>
+      <li><a href="#scale"><i>02</i>Scale</a></li>
+      <li><a href="#posters"><i>03</i>Posters</a></li>
+      <li><a href="#contrast"><i>04</i>Contrast</a></li>
+      <li><a href="#export"><i>05</i>Export</a></li>
+      <li><a href="#history"><i>06</i>Drawer</a></li>
+      <li><a href="#game"><i>07</i>Game</a></li>
+      <li><a href="#timeline"><i>08</i>History</a></li>
+      <li><a href="#about"><i>09</i>About</a></li>
+    </ul>
+  </nav>
+  <div class="top-tools">
+    <button class="icon-btn" id="shareTop" type="button" aria-label="Copy shareable link to this design" title="Copy link">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button class="icon-btn" id="soundBtn" type="button" aria-pressed="false" aria-label="Sound off. Turn on press sounds" title="Sound">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="snd-wave" d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="snd-x" d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Change site theme">
+      <span class="theme-dot" aria-hidden="true"></span><span id="themeName">Swiss</span>
+    </button>
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-labelledby="heroTitle">
+  <div class="hero-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-disc" aria-hidden="true"></div>
+  <p class="hero-kicker">Nº 001 — A typography playground — Set in your browser</p>
+  <h1 class="hero-word" id="heroTitle" aria-label="Foundry">
+    <span class="hl" aria-hidden="true">F</span><span class="hl" aria-hidden="true">o</span><span class="hl" aria-hidden="true">u</span><span class="hl" aria-hidden="true">n</span><span class="hl" aria-hidden="true">d</span><span class="hl" aria-hidden="true">r</span><span class="hl" aria-hidden="true">y</span>
+  </h1>
+  <div class="hero-row">
+    <p class="hero-lede">Pair typefaces, forge a type scale, tune tracking, leading and weight, pull a specimen poster off the press — and keep it all in a single link. <em>Tap the letters. They like it.</em></p>
+    <div class="hero-cta">
+      <a class="btn btn-ink" href="#studio">Start setting type</a>
+      <a class="btn btn-ghost" href="#game">Play Guess the Font</a>
+    </div>
+  </div>
+  <p class="hero-side" aria-hidden="true">Kerning · Leading · Tracking · Weight · Contrast</p>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-in" id="tickerIn">
+      <span>Aa Bb Cc Dd Ee Ff Gg</span><span>Keming (n.): what happens when nobody checks the kerning</span><span>Hamburgefonstiv</span><span>Please don’t stretch the type</span><span>Ascenders ↑ Descenders ↓</span><span>Ligatures: fi fl ff</span>
+    </div>
+  </div>
+</section>
+
+<!-- 01 STUDIO -->
+<section class="sec" id="studio" aria-labelledby="studioTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">01</span>
+    <h2 class="sec-title" id="studioTitle" data-split>Pairing Studio</h2>
+    <p class="sec-sub">One face to shout, one to talk. Mix web fonts (loaded only when picked) with system stacks that work offline.</p>
+  </header>
+  <div class="studio-grid">
+    <aside class="panel controls" aria-label="Pairing controls">
+      <div class="field">
+        <label for="hFont">Heading face</label>
+        <select id="hFont"></select>
+      </div>
+      <div class="field">
+        <label for="bFont">Body face</label>
+        <select id="bFont"></select>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ink" id="shuffleBtn" type="button">Shuffle pairing</button>
+        <button class="btn btn-ghost" id="swapFonts" type="button">Swap faces</button>
+      </div>
+      <p class="font-status" id="fontStatus" role="status" aria-live="polite">Fonts ready.</p>
+      <div class="field">
+        <label for="headText">Headline text</label>
+        <input id="headText" type="text" maxlength="40" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="slider">
+        <label for="hw">Heading weight <output id="hwOut" for="hw">800</output></label>
+        <input id="hw" type="range" min="100" max="900" step="1">
+      </div>
+      <div class="slider">
+        <label for="bw">Body weight <output id="bwOut" for="bw">400</output></label>
+        <input id="bw" type="range" min="100" max="900" step="1">
+      </div>
+      <div class="slider">
+        <label for="ht">Heading tracking <output id="htOut" for="ht">0</output></label>
+        <input id="ht" type="range" min="-10" max="30" step="1">
+      </div>
+      <div class="slider">
+        <label for="bt">Body tracking <output id="btOut" for="bt">0</output></label>
+        <input id="bt" type="range" min="-5" max="20" step="1">
+      </div>
+      <div class="slider">
+        <label for="hl">Heading leading <output id="hlOut" for="hl">1.00</output></label>
+        <input id="hl" type="range" min="80" max="160" step="1">
+      </div>
+      <div class="slider">
+        <label for="lh">Body leading <output id="lhOut" for="lh">1.50</output></label>
+        <input id="lh" type="range" min="100" max="240" step="1">
+      </div>
+      <div class="toggles">
+        <label class="chip"><input type="checkbox" id="italicT"><span>Italic headline</span></label>
+        <label class="chip"><input type="checkbox" id="upperT"><span>ALL CAPS</span></label>
+      </div>
+      <div class="field">
+        <span class="label-like" id="pairLbl">Curated pairings</span>
+        <div class="pair-list" id="pairList" role="group" aria-labelledby="pairLbl"></div>
+      </div>
+    </aside>
+
+    <article class="specimen" id="specimen" aria-label="Live specimen">
+      <div class="sp-meta"><span id="spHeadName">Fraunces</span> <b aria-hidden="true">+</b> <span id="spBodyName">Inter</span></div>
+      <p class="sp-kicker">The Weekly Specimen · Vol. 12</p>
+      <h3 class="sp-head" id="spHead">Foundry</h3>
+      <p class="sp-deck" id="spDeck">In which two typefaces meet, size each other up, and decide they could probably share a page.</p>
+      <div class="sp-cols">
+        <p class="sp-body" id="spBody">Good typography is invisible until it isn’t. The reader should glide from line to line without noticing the leading, the tracking or the careful weight of each stroke. When a pairing works, the headline sets the mood and the body text does the patient work of being read. Try loosening the leading for long passages and tightening the tracking on big display sizes — large type tends to look gappy, small type tends to look cramped.</p>
+        <blockquote class="sp-quote" id="spQuote">“Helvetica and Times walk into a bar. The bartender says: ‘Sorry, we don’t serve your type.’”</blockquote>
+      </div>
+      <div class="sp-glyphs" id="spGlyphs" aria-hidden="true">Aa Gg Rr &amp; 0123456789 ?!</div>
+    </article>
+  </div>
+</section>
+
+<!-- 02 SCALE -->
+<section class="sec" id="scale" aria-labelledby="scaleTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">02</span>
+    <h2 class="sec-title" id="scaleTitle" data-split>Type Scale</h2>
+    <p class="sec-sub">Pick a base size and a musical ratio. Every step is the last one times the ratio — harmony, but for headings.</p>
+  </header>
+  <div class="scale-tools panel">
+    <div class="slider">
+      <label for="sz">Base size <output id="szOut" for="sz">18px</output></label>
+      <input id="sz" type="range" min="12" max="28" step="1">
+    </div>
+    <div class="field">
+      <label for="ratioSel">Ratio</label>
+      <select id="ratioSel"></select>
+    </div>
+    <div class="field">
+      <label for="scaleText">Sample text</label>
+      <input id="scaleText" type="text" maxlength="40" value="The quick brown fox" autocomplete="off">
+    </div>
+  </div>
+  <ol class="scale-list" id="scaleList" aria-label="Type scale steps"></ol>
+</section>
+
+<!-- 03 POSTERS -->
+<section class="sec" id="posters" aria-labelledby="postersTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">03</span>
+    <h2 class="sec-title" id="postersTitle" data-split>Specimen Posters</h2>
+    <p class="sec-sub">Your pairing, pulled off the press in four layouts. Colours come from the contrast checker. Ink smudges are free of charge.</p>
+  </header>
+  <div class="poster-wrap">
+    <div class="poster-tabs" id="posterTabs" role="tablist" aria-label="Poster layout">
+      <button role="tab" type="button" data-p="zurich" aria-selected="true">Zürich Grid</button>
+      <button role="tab" type="button" data-p="press" aria-selected="false">Letterpress</button>
+      <button role="tab" type="button" data-p="glyph" aria-selected="false">Big Glyph</button>
+      <button role="tab" type="button" data-p="fall" aria-selected="false">Waterfall</button>
+    </div>
+    <div class="poster-stage">
+      <div class="poster-frame" id="posterFrame">
+        <canvas id="posterCanvas" width="900" height="1200" role="img" aria-label="Specimen poster preview"></canvas>
+        <div class="press-bar" id="pressBar" aria-hidden="true"></div>
+      </div>
+      <div class="poster-side panel">
+        <p class="poster-caption" id="posterCaption">Zürich Grid — strict columns, one loud circle.</p>
+        <div class="btn-col">
+          <button class="btn btn-ink" id="posterPng" type="button">Download PNG</button>
+          <button class="btn btn-ghost" id="posterAnim" type="button" aria-pressed="false">Animate poster</button>
+          <button class="btn btn-ghost" id="posterInvert" type="button">Invert ink &amp; paper</button>
+          <button class="btn btn-ghost" id="posterReprint" type="button">Re-ink (new texture)</button>
+        </div>
+        <p class="tiny">Tip: posters render on canvas at 900×1200. Web fonts must finish loading first; offline, Foundry prints with the fallback stack and tells you so.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 CONTRAST -->
+<section class="sec" id="contrast" aria-labelledby="contrastTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">04</span>
+    <h2 class="sec-title" id="contrastTitle" data-split>Contrast Checker</h2>
+    <p class="sec-sub">WCAG 2.x contrast ratios for your ink and paper. Pretty is good. Readable is mandatory.</p>
+  </header>
+  <div class="contrast-grid">
+    <div class="panel c-controls">
+      <div class="color-field">
+        <label for="fgHex">Ink (text)</label>
+        <div class="color-row">
+          <input type="color" id="fgPick" aria-label="Pick ink colour">
+          <input type="text" id="fgHex" maxlength="7" spellcheck="false" autocomplete="off">
+        </div>
+      </div>
+      <div class="color-field">
+        <label for="bgHex">Paper (background)</label>
+        <div class="color-row">
+          <input type="color" id="bgPick" aria-label="Pick paper colour">
+          <input type="text" id="bgHex" maxlength="7" spellcheck="false" autocomplete="off">
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" id="swapColors" type="button">Swap</button>
+        <button class="btn btn-ink" id="fixBtn" type="button">Fix for AA</button>
+      </div>
+      <span class="label-like" id="palLbl">Press palettes</span>
+      <div class="palettes" id="palettes" role="group" aria-labelledby="palLbl"></div>
+    </div>
+    <div class="c-result">
+      <div class="ratio-card" id="cPreview">
+        <p class="ratio-num"><span id="ratioOut">0.00</span><small>:1</small></p>
+        <p class="ratio-verdict" id="ratioVerdict">Checking…</p>
+        <p class="c-big">Large text sample</p>
+        <p class="c-small">Body copy at 16px. If you squint and it vanishes, so will your readers.</p>
+      </div>
+      <ul class="badges" aria-label="WCAG results">
+        <li id="bAAn"><b>AA</b> normal text <span>≥ 4.5</span></li>
+        <li id="bAAl"><b>AA</b> large text <span>≥ 3</span></li>
+        <li id="bAAAn"><b>AAA</b> normal text <span>≥ 7</span></li>
+        <li id="bAAAl"><b>AAA</b> large text <span>≥ 4.5</span></li>
+        <li id="bUI"><b>UI</b> graphics &amp; borders <span>≥ 3</span></li>
+      </ul>
+      <p class="tiny">“Large” means at least 24px regular or about 18.66px bold. Ratios use the WCAG 2.x relative-luminance formula.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 EXPORT -->
+<section class="sec" id="export" aria-labelledby="exportTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">05</span>
+    <h2 class="sec-title" id="exportTitle" data-split>CSS Export</h2>
+    <p class="sec-sub">Take the whole system home: font imports, custom properties, the scale, the colours. Paste it, ship it, take the credit.</p>
+  </header>
+  <div class="export-wrap">
+    <div class="export-bar">
+      <div class="seg" id="exTabs" role="tablist" aria-label="Export format">
+        <button role="tab" type="button" data-x="css" aria-selected="true">CSS</button>
+        <button role="tab" type="button" data-x="json" aria-selected="false">Design tokens (JSON)</button>
+      </div>
+      <label class="chip"><input type="checkbox" id="fluidT"><span>Fluid sizes (clamp)</span></label>
+      <div class="btn-row">
+        <button class="btn btn-ink" id="copyCss" type="button">Copy</button>
+        <button class="btn btn-ghost" id="dlCss" type="button">Download</button>
+      </div>
+    </div>
+    <pre class="code" tabindex="0" aria-label="Exported code"><code id="exCode"></code></pre>
+  </div>
+</section>
+
+<!-- 06 HISTORY -->
+<section class="sec" id="history" aria-labelledby="historyTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">06</span>
+    <h2 class="sec-title" id="historyTitle" data-split>The Type Drawer</h2>
+    <p class="sec-sub">Your design is already saved — in the address bar. Every tweak rewrites the link. File the ones you love here (on this device only).</p>
+  </header>
+  <div class="panel save-bar">
+    <div class="field grow">
+      <label for="saveName">Name this design</label>
+      <input id="saveName" type="text" maxlength="40" placeholder="e.g. Sunday Supplement" autocomplete="off">
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-ink" id="saveBtn" type="button">File in drawer</button>
+      <button class="btn btn-ghost" id="shareBtn" type="button">Copy link</button>
+      <button class="btn btn-ghost" id="resetBtn" type="button">Reset design</button>
+    </div>
+  </div>
+  <p class="url-peek"><span>Current link</span> <code id="urlPeek">…</code></p>
+  <div class="hist-empty" id="histEmpty">
+    <p class="big-empty" aria-hidden="true">∅</p>
+    <p>The drawer is empty. The press is cold. Set something lovely and hit <b>File in drawer</b>.</p>
+  </div>
+  <ul class="hist-list" id="histList" aria-label="Saved designs"></ul>
+  <div class="btn-row end"><button class="btn btn-ghost small" id="clearHist" type="button">Empty the drawer</button></div>
+</section>
+
+<!-- 07 GAME -->
+<section class="sec" id="game" aria-labelledby="gameTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">07</span>
+    <h2 class="sec-title" id="gameTitle" data-split>Guess the Font</h2>
+    <p class="sec-sub">Ten rounds. One specimen. Four suspects. Typographers call this a fun Friday.</p>
+  </header>
+  <div class="game panel">
+    <div class="game-hud" aria-live="polite">
+      <span>Round <b id="gameRound">0</b>/10</span>
+      <span>Score <b id="gameScore">0</b></span>
+      <span>Streak <b id="gameStreak">0</b></span>
+      <span>Best <b id="gameBest">0</b></span>
+    </div>
+    <div class="game-stage" id="gameStage">
+      <p class="game-word" id="gameWord" aria-live="polite">Ready?</p>
+      <p class="game-msg" id="gameMsg" role="status">Press start. We’ll load a handful of web fonts first.</p>
+    </div>
+    <div class="game-opts" id="gameOpts" role="group" aria-label="Answer choices"></div>
+    <div class="btn-row center">
+      <button class="btn btn-ink" id="gameStart" type="button">Start game</button>
+      <button class="btn btn-ghost" id="gameHint" type="button" disabled>Hint</button>
+    </div>
+  </div>
+</section>
+
+<!-- 08 TIMELINE -->
+<section class="sec" id="timeline" aria-labelledby="timelineTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">08</span>
+    <h2 class="sec-title" id="timelineTitle" data-split>A Short History of Type</h2>
+    <p class="sec-sub">Nearly a thousand years, from baked clay to variable fonts. Swipe, scroll or use the arrows.</p>
+  </header>
+  <div class="tl-filters" id="tlFilters" role="group" aria-label="Filter by era"></div>
+  <div class="tl-wrap">
+    <button class="icon-btn tl-arrow" id="tlPrev" type="button" aria-label="Previous events">←</button>
+    <ol class="tl-track" id="tlTrack" tabindex="0" aria-label="Type history timeline"></ol>
+    <button class="icon-btn tl-arrow" id="tlNext" type="button" aria-label="Next events">→</button>
+  </div>
+</section>
+
+<!-- 09 ABOUT -->
+<section class="sec about" id="about" aria-labelledby="aboutTitle">
+  <header class="sec-head">
+    <span class="sec-num" aria-hidden="true">09</span>
+    <h2 class="sec-title" id="aboutTitle" data-split>About / Made by</h2>
+  </header>
+  <div class="about-grid">
+    <div class="about-copy">
+      <p class="about-lede">Foundry is a free, no-sign-up typography playground. No servers, no accounts, no trackers — your entire design is encoded in the link, and your drawer of favourites lives in this browser’s local storage.</p>
+      <p>Designed &amp; built by <strong>Kumar Nikhil</strong>, who believes every paragraph deserves decent leading.</p>
+      <ul class="about-links">
+        <li><a href="https://kumarnikhildeveloperaccount.github.io/" target="_blank" rel="noopener">Portfolio ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/kumar-nikhil-1000a9192/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="mailto:nkashyapnikhilnk@gmail.com">Email ✉</a></li>
+        <li><a href="https://kumarnikhildeveloperaccount.github.io/" target="_blank" rel="noopener">More projects by Kumar Nikhil →</a></li>
+      </ul>
+    </div>
+    <div class="about-card" aria-hidden="true">
+      <p class="ac-a">Aa</p>
+      <p class="ac-b">Set with care.<br>Printed with love.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-row">
+    <p class="foot-brand">Foundry<span>®</span><small>fictional trademark, real kerning</small></p>
+    <p>Designed &amp; built by Kumar Nikhil ·
+      <a href="https://kumarnikhildeveloperaccount.github.io/" target="_blank" rel="noopener">Portfolio</a> ·
+      <a href="https://www.linkedin.com/in/kumar-nikhil-1000a9192/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="mailto:nkashyapnikhilnk@gmail.com">Email</a> ·
+      <a href="https://kumarnikhildeveloperaccount.github.io/" target="_blank" rel="noopener">More projects by Kumar Nikhil →</a></p>
+  </div>
+  <p class="gratitude">With gratitude to God — Om Namah Paarvati Pateh, Har Har Mahadev. May God bless you and everyone.</p>
+  <p class="tiny foot-tiny">Web fonts served by Google Fonts when you pick them; everything else runs on your device. Psst — try typing “comic sans”.</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/studio.js" defer></script>
+<script src="js/poster.js" defer></script>
+<script src="js/tools.js" defer></script>
+<script src="js/game.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
